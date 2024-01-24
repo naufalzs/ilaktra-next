@@ -1,11 +1,12 @@
+import { Footer, NavbarMain } from "@/components";
 import React from "react";
 
 export default function MainLayout({ children }) {
   return (
-    <>
-      <div>Navbar</div>
+    <div className="bg-primary w-full h-full">
+      <NavbarMain />
       {children}
-      <div>Footer</div>
-    </>
+      <Footer />
+    </div>
   );
 }
