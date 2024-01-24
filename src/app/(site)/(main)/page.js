@@ -1,7 +1,14 @@
-import Image from "next/image";
+import { ilaktraValueList } from "@/constants";
+import { Hero, Industries, PostRFQ, Reviews, ValueSection } from "@/containers";
 
 export default function HomePage() {
   return (
-    <div>Homepage goes here</div>
+    <>
+      <Hero />
+      <Industries />
+      <Reviews />
+      <ValueSection title="Why Choose ILAKTRA?" data={ilaktraValueList} />
+      <PostRFQ />
+    </>
   );
 }
