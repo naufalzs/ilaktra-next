@@ -1,6 +1,6 @@
 import React from "react";
 import { H1, H3 } from "@/components/Heading";
-import { Industries, PostRFQ, Reviews, ValueSection } from "@/containers";
+import { Industries, PostRFQSection, Reviews, ValueSection } from "@/containers";
 import { ilaktraValueList } from "@/constants";
 
 const AboutText = ({ children }) => (
@@ -38,7 +38,7 @@ export default function AboutUsPage() {
       <Industries />
       <Reviews />
       <ValueSection title="Why Choose ILAKTRA?" data={ilaktraValueList} />
-      <PostRFQ />
+      <PostRFQSection />
     </>
   );
 }

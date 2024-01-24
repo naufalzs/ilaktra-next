@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 
-const PostRFQ = () => {
+const PostRFQSection = () => {
   return (
     <>
       <div className="py-20 bg-[#182022] flex md:flex-row flex-col md:px-44 px-10 md:h-[35rem]">
@@ -32,4 +32,4 @@ const PostRFQ = () => {
   );
 };
 
-export default PostRFQ;
+export default PostRFQSection;

@@ -1,5 +1,5 @@
 import { ilaktraValueList } from "@/constants";
-import { Hero, Industries, PostRFQ, Reviews, ValueSection } from "@/containers";
+import { Hero, Industries, PostRFQSection, Reviews, ValueSection } from "@/containers";
 
 export default function HomePage() {
   return (
@@ -8,7 +8,7 @@ export default function HomePage() {
       <Industries />
       <Reviews />
       <ValueSection title="Why Choose ILAKTRA?" data={ilaktraValueList} />
-      <PostRFQ />
+      <PostRFQSection />
     </>
   );
 }
