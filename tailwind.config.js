@@ -14,8 +14,12 @@ module.exports = {
       },
       fontFamily: {
         lato: ["var(--font-lato)"],
-        montserrat: ["var(--font-montserrat)", 'sans-serif'],
+        montserrat: ["var(--font-montserrat)", "sans-serif"],
         quicksand: ["var(--font-quicksand)"],
+      },
+      colors: {
+        primary: "#46a587",
+        secondary: "#b4fae4",
       },
     },
   },
