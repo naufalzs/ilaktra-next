@@ -11,3 +11,5 @@ export { default as ExtraValueSection } from "./ExtraValueSection";
 export { default as UserProfile } from "./dashboard/UserProfile";
 export { default as CompanyProfile } from "./dashboard/seller/CompanyProfile";
 export { default as BrowseRFQ } from "./dashboard/seller/BrowseRFQ";
+export { default as SearchSeller } from "./dashboard/buyer/SearchSeller";
+export { default as ModalSendMessage } from "./dashboard/buyer/ModalSendMessage";
