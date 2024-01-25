@@ -23,6 +23,9 @@ module.exports = {
         primary: "#46a587",
         secondary: "#b4fae4",
       },
+      boxShadow: {
+        btn: "0px 2px 8px rgba(0,0,0,0.16)",
+      },
     },
   },
   plugins: [],
