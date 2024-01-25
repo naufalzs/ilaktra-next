@@ -9,6 +9,7 @@ export { default as ExtraValueSection } from "./ExtraValueSection";
 
 // Dashboard Container
 export { default as UserProfile } from "./dashboard/UserProfile";
+export { default as Chatbox } from "./dashboard/Chatbox";
 export { default as SearchSeller } from "./dashboard/buyer/SearchSeller";
 export { default as ModalSendMessage } from "./dashboard/buyer/ModalSendMessage";
 export { default as CompanyProfile } from "./dashboard/seller/CompanyProfile";
