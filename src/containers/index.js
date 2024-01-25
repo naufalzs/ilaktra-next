@@ -8,6 +8,7 @@ export { default as HeroBuyerSeller } from "./HeroBuyerSeller";
 export { default as ExtraValueSection } from "./ExtraValueSection";
 
 // Dashboard Container
+export { default as DashboardMain } from "./dashboard/Main";
 export { default as UserProfile } from "./dashboard/UserProfile";
 export { default as Chatbox } from "./dashboard/Chatbox";
 export { default as SearchSeller } from "./dashboard/buyer/SearchSeller";

@@ -1,7 +1,20 @@
-import React from 'react'
+import React from "react";
+import {
+  PostRFQForm,
+  SearchSeller,
+  UserProfile,
+  Chatbox,
+  DashboardMain,
+} from "@/containers";
 
 export default function BuyerDashboardPage() {
-  return (
-    <div>BuyerDashboardPage</div>
-  )
+  
+  const componentMap = {
+    userProfile: <UserProfile isBuyer />,
+    searchSeller: <SearchSeller />,
+    searchSellerMessage: <Chatbox />,
+    buyerPostRFQ: <PostRFQForm isDashboard />,
+  };
+
+  return <DashboardMain componentMap={componentMap} isBuyer />;
 }

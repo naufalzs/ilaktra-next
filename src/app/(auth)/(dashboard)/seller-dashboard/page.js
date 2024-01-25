@@ -1,7 +1,17 @@
-import React from 'react'
+import React from "react";
+import { UserProfile, BrowseRFQ, CompanyProfile, Product, Chatbox, DashboardMain } from "@/containers";
 
 export default function SellerDashboardPage() {
+
+  const componentMap = {
+    dashboard: <UserProfile />,
+    product: <Product />,
+    profile: <CompanyProfile />,
+    browseRFQ: <BrowseRFQ />,
+    searchSellerMessage: <Chatbox />,
+  };
+
   return (
-    <div>SellerDashboardPage</div>
-  )
+   <DashboardMain componentMap={componentMap} />
+  );
 }
