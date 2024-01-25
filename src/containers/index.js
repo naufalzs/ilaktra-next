@@ -9,7 +9,10 @@ export { default as ExtraValueSection } from "./ExtraValueSection";
 
 // Dashboard Container
 export { default as UserProfile } from "./dashboard/UserProfile";
-export { default as CompanyProfile } from "./dashboard/seller/CompanyProfile";
-export { default as BrowseRFQ } from "./dashboard/seller/BrowseRFQ";
 export { default as SearchSeller } from "./dashboard/buyer/SearchSeller";
 export { default as ModalSendMessage } from "./dashboard/buyer/ModalSendMessage";
+export { default as CompanyProfile } from "./dashboard/seller/CompanyProfile";
+export { default as BrowseRFQ } from "./dashboard/seller/BrowseRFQ";
+export { default as Product } from "./dashboard/seller/Product";
+export { default as AddProductForm } from "./dashboard/seller/AddProductForm";
+export { default as EmptyProductState } from "./dashboard/seller/EmptyProductState";
