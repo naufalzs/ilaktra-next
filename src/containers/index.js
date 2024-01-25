@@ -6,3 +6,8 @@ export { default as PostRFQForm } from "./PostRFQForm";
 export { default as PostRFQSection } from "./PostRFQSection";
 export { default as HeroBuyerSeller } from "./HeroBuyerSeller";
 export { default as ExtraValueSection } from "./ExtraValueSection";
+
+// Dashboard Container
+export { default as UserProfile } from "./dashboard/UserProfile";
+export { default as CompanyProfile } from "./dashboard/seller/CompanyProfile";
+export { default as BrowseRFQ } from "./dashboard/seller/BrowseRFQ";
