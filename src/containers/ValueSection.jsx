@@ -4,7 +4,7 @@ import { H2, H3 } from "@/components/Heading";
 
 const ValueCard = ({ item }) => (
   <div className="bg-secondary h-[300px] w-[425px] rounded-2xl items-center justify-center md:flex hidden">
-    <FontAwesomeIcon icon={item.icon} height={125} />
+    <FontAwesomeIcon icon={item.icon} height={125}/>
   </div>
 );
 
