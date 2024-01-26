@@ -49,13 +49,15 @@ export default function SignupPage() {
   return (
     <>
       <div className="min-h-screen w-full flex overflow-hidden">
-        <div className="h-auto md:w-[936px] w-0 bg-cover">
+        <div className="relative w-0 md:w-[936px] bg-cover">
           <Image
             src={imgUrl}
-            width={1920}
-            height={2160}
             alt=""
-            className="h-full w-full"
+            width={0}
+            height={0}
+            sizes="100vw"
+            priority
+            className="w-full h-full"
           />
         </div>
 

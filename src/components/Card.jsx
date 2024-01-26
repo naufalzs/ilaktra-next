@@ -38,17 +38,22 @@ const Card = ({ item, isRFQ, isSeller, onClick }) => (
     )}
   >
     {!isRFQ && (
-      <div className="flex items-center">
-        <Image
-          src="/images/tshirt.jpeg"
-          width={250}
-          height={250}
-          alt={item.name}
-          className={cx({
-            "w-[35rem] object-cover": !isSeller,
+      <div className="relative flex items-center">
+        <div
+          className={cx("relative", {
+            "w-[13.3rem] object-cover": !isSeller,
             "w-full md:w-[15rem] ": isSeller,
           })}
-        />
+        >
+          <Image
+            src="/images/tshirt.jpeg"
+            alt={item.name}
+            width={0}
+            height={0}
+            sizes="100vw"
+            className="w-full h-full"
+          />
+        </div>
       </div>
     )}
 

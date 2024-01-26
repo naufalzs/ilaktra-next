@@ -19,13 +19,17 @@ const PostRFQSection = () => {
           </div>
         </div>
         <div className="md:w-1/2 md:mt-0 mt-10 w-full flex items-center justify-center">
-          <Image
-            src="/images/home/postrfq.png"
-            width={800}
-            height={800}
-            alt=""
-            className="scale-125 md:scale-100 "
-          />
+          <div className="relative w-full">
+            <Image
+              src="/images/home/postrfq.png"
+              alt=""
+              width={0}
+              height={0}
+              sizes="100vw"
+              priority
+              className="w-full h-full scale-125 md:scale-100 "
+            />
+          </div>
         </div>
       </div>
     </>

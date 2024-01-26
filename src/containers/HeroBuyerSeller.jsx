@@ -24,8 +24,17 @@ export default function HeroBuyerSeller({ isBuyer }) {
           </p>
         </div>
       </div>
-      <div className="md:w-1/2 md:mt-0 mt-10 w-full flex items-center justify-center">
-        <Image src="/images/home/buyer.png" alt="" width={700} height={700} className="px-14" />
+      <div className="w-full md:w-1/2 mt-10 md:mt-0 flex items-center justify-center">
+        <div className="relative w-full">
+          <Image
+            src="/images/home/buyer.png"
+            alt=""
+            width={0}
+            height={0}
+            sizes="100vw"
+            className="w-full h-full px-14"
+          />
+        </div>
       </div>
     </div>
   );
