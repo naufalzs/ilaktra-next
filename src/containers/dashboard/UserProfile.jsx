@@ -11,7 +11,7 @@ import Button from "@/components/Button";
 
 const UserInfoCard = ({ title, info, isEmail, extra }) => (
   <div className="shadow border border-gray-50 rounded-3xl w-[18rem] h-[8rem] p-3">
-    <p className="text-center font-montserrat text-xl text-[#030303] font-medium leading-[26px]">
+    <p className="font-montserrat text-xl text-[#030303] font-medium leading-[26px]">
       {" "}
       {title}
     </p>
@@ -19,7 +19,7 @@ const UserInfoCard = ({ title, info, isEmail, extra }) => (
       {isEmail ? (
         <p className="underline">{info}</p>
       ) : (
-        <p className="text-center font-montserrat text-[32px] text-[#030303] font-medium leading-[42px]">
+        <p className="font-montserrat text-[32px] text-[#030303] font-medium leading-[42px]">
           {info}
         </p>
       )}
@@ -36,7 +36,7 @@ const UserProfile = ({ isBuyer }) => {
   return (
     <div className="md:w-2/3 md:px-10 px-5 my-10">
       <div className="flex md:flex-row flex-col mb-10 md:space-x-7 items-center md:space-y-0 space-y-3">
-        <UserInfoCard title="Membership Type" info="Free" extra="Upgrade" />
+        <UserInfoCard title="Membership Type" info="Free" extra={isBuyer ? "Upgrade" : ""} />
         <UserInfoCard title="Email" info="adasdads@asd.com" isEmail />
       </div>
 

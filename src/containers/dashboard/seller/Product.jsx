@@ -15,7 +15,7 @@ const Product = () => {
       {/* if product list is empty, return empty state  */}
       {productList.length > 0 ? (
         <div className="p-5">
-          <p className="py-5 font-montserrat text-2xl text-[#030303] font-medium leading-[31px]">
+          <p className="py-5 font-montserrat text-2xl text-[#030303] leading-[31px]">
             Products - 0/10
           </p>
           <div className="grid md:grid-cols-1 gap-4">
