@@ -4,7 +4,6 @@ import { faChevronRight, faTimes } from "@fortawesome/free-solid-svg-icons";
 import { CustomInput } from "@/components";
 
 const ModalSendMessage = ({ onClick }) => {
-  // DONT FORGET TO PAIR TO PORTAL
   return (
     <div
       className="fixed inset-0 bg-black bg-opacity-50 overflow-y-auto h-full w-full"
