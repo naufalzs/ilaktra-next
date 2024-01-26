@@ -4,9 +4,15 @@ import React from "react";
 export default function MainLayout({ children }) {
   return (
     <div className="bg-primary w-full h-full">
-      <NavbarMain />
+      <section>
+        <NavbarMain />
+      </section>
+
       {children}
-      <Footer />
+      
+      <section className="w-full">
+        <Footer />
+      </section>
     </div>
   );
 }

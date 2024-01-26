@@ -5,9 +5,17 @@ import { ExtraValueSection, HeroBuyerSeller, ValueSection } from "@/containers";
 export default function BuyerPage() {
   return (
     <>
-      <HeroBuyerSeller isBuyer />
-      <ValueSection data={buyerAdvantageList} />
-      <ExtraValueSection />
+      <section className="w-full">
+        <HeroBuyerSeller isBuyer />
+      </section>
+
+      <section className="w-full">
+        <ValueSection data={buyerAdvantageList} />
+      </section>
+
+      <section className="w-full">
+        <ExtraValueSection />
+      </section>
     </>
   );
 }

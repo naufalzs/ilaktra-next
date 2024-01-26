@@ -5,8 +5,13 @@ import { HeroBuyerSeller, ValueSection } from "@/containers";
 export default function SellerPage() {
   return (
     <>
-      <HeroBuyerSeller />
-      <ValueSection data={sellerAdvantageList} />
+      <section className="w-full">
+        <HeroBuyerSeller />
+      </section>
+
+      <section className="w-full">
+        <ValueSection data={sellerAdvantageList} />
+      </section>
     </>
   );
 }
