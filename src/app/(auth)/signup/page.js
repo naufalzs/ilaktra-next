@@ -6,47 +6,17 @@ import {
   faPhone,
   faUser,
 } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
 import Image from "next/image";
-import { Captcha, Checkbox } from "@/components";
-
-const TextInput = ({
-  htmlFor,
-  label,
-  type,
-  name,
-  id,
-  autoComplete,
-  placeholder,
-  required,
-  icon,
-}) => (
-  <div>
-    <label
-      htmlFor={htmlFor}
-      className="block text-sm font-medium text-gray-700 mb-1"
-    >
-      {label}
-    </label>
-    <div className="w-full shadow-md border sm:text-sm border-gray-100 bg-white rounded-md flex items-center justify-center">
-      <input
-        type={type}
-        name={name}
-        id={id}
-        autoComplete={autoComplete}
-        placeholder={placeholder}
-        required={required}
-        className="mt-1 bg-white border-none focus:outline-none hover:border-none active:border-none flex-1 py-3 pl-4"
-      />
-      <FontAwesomeIcon icon={icon} height={14} className="pr-4" />
-    </div>
-  </div>
-);
+import { Captcha, Checkbox, TextInput } from "@/components";
 
 export default function SignupPage() {
   const imgUrl =
     "https://images.unsplash.com/photo-1553413077-190dd305871c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wyMDUzMDJ8MHwxfHNlYXJjaHwxfHx3YXJlaG91c2V8ZW58MXx8fHwxNjk5MzAxNDk4fDA&ixlib=rb-4.0.3&q=80&w=1080";
+
+  const inputStyle = {
+    classNameContainer: "shadow-md rounded-md",
+  };
   return (
     <>
       <div className="min-h-screen w-full flex overflow-hidden">
@@ -97,6 +67,7 @@ export default function SignupPage() {
 
                 {/* Input List */}
                 <TextInput
+                  classNameContainer={inputStyle.classNameContainer}
                   htmlFor="full-name"
                   label="Full name"
                   type="text"
@@ -109,6 +80,7 @@ export default function SignupPage() {
                 />
 
                 <TextInput
+                  classNameContainer={inputStyle.classNameContainer}
                   htmlFor="email"
                   label="Email"
                   type="email"
@@ -121,6 +93,7 @@ export default function SignupPage() {
                 />
 
                 <TextInput
+                  classNameContainer={inputStyle.classNameContainer}
                   htmlFor="phone"
                   label="Phone"
                   type="tel"
@@ -133,6 +106,7 @@ export default function SignupPage() {
                 />
 
                 <TextInput
+                  classNameContainer={inputStyle.classNameContainer}
                   htmlFor="industry"
                   label="Industry"
                   type="text"
@@ -144,6 +118,7 @@ export default function SignupPage() {
                 />
 
                 <TextInput
+                  classNameContainer={inputStyle.classNameContainer}
                   htmlFor="password"
                   label="Create your password"
                   type="password"
@@ -156,6 +131,7 @@ export default function SignupPage() {
                 />
 
                 <TextInput
+                  classNameContainer={inputStyle.classNameContainer}
                   htmlFor="confirm-password"
                   label="Confirm Password"
                   type="password"

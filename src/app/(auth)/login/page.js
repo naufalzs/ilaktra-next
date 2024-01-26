@@ -1,43 +1,15 @@
 import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faEye } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
-import { Checkbox } from "@/components";
-
-const TextInput = ({
-  htmlFor,
-  label,
-  type,
-  name,
-  id,
-  autoComplete,
-  placeholder,
-  required,
-  icon,
-}) => (
-  <div className="flex-col flex space-y-4">
-    <label
-      htmlFor={htmlFor}
-      className="block text-sm font-medium text-gray-700"
-    >
-      {label}
-    </label>
-    <div className="w-full shadow-sm sm:text-sm border-gray-300 bg-white  rounded-full overflow-hidden flex items-center">
-      <input
-        type={type}
-        name={name}
-        id={id}
-        autoComplete={autoComplete}
-        placeholder={placeholder}
-        required={required}
-        className="mt-1 flex-1 py-3 pl-4 rounded-l-md bg-white border-none focus:outline-none hover:border-none active:border-none"
-      />
-      <FontAwesomeIcon icon={icon} height={14} className="pr-4" />
-    </div>
-  </div>
-);
+import { Checkbox, TextInput } from "@/components";
 
 export default function LoginPage() {
+  const inputStyle = {
+    className: "flex-col flex space-y-4",
+    classNameContainer: "shadow-sm rounded-full overflow-hidden",
+    classNameInput: "rounded-l-md",
+  };
+
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-md w-full space-y-8">
@@ -60,6 +32,9 @@ export default function LoginPage() {
               placeholder="Enter your email address"
               required
               icon={faEnvelope}
+              className={inputStyle.className}
+              classNameContainer={inputStyle.classNameContainer}
+              classNameInput={inputStyle.classNameInput}
             />
             <TextInput
               htmlFor="password"
@@ -71,6 +46,9 @@ export default function LoginPage() {
               placeholder="Enter your password"
               required
               icon={faEye}
+              className={inputStyle.className}
+              classNameContainer={inputStyle.classNameContainer}
+              classNameInput={inputStyle.classNameInput}
             />
           </div>
 

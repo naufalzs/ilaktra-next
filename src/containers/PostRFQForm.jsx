@@ -14,7 +14,7 @@ import Link from "next/link";
 import { H1 } from "@/components/Heading";
 import { Captcha, Checkbox } from "@/components";
 
-const TextInput = ({
+const TextInputRFQ = ({
   htmlFor,
   label,
   type,
@@ -140,7 +140,7 @@ const PostRFQForm = ({ isDashboard, isLogin }) => {
         <div className="flex flex-col md:grid md:grid-cols-2 md:gap-6">
           {!isLogin && !isDashboard && (
             <>
-              <TextInput
+              <TextInputRFQ
                 htmlFor="full-name"
                 label="Full name"
                 type="text"
@@ -150,7 +150,7 @@ const PostRFQForm = ({ isDashboard, isLogin }) => {
                 icon={faUser}
               />
 
-              <TextInput
+              <TextInputRFQ
                 htmlFor="email"
                 label="Email"
                 type="email"
@@ -160,7 +160,7 @@ const PostRFQForm = ({ isDashboard, isLogin }) => {
                 icon={faEnvelope}
               />
 
-              <TextInput
+              <TextInputRFQ
                 htmlFor="phone"
                 label="Phone"
                 type="tel"
@@ -170,7 +170,7 @@ const PostRFQForm = ({ isDashboard, isLogin }) => {
                 icon={faPhone}
               />
 
-              <TextInput
+              <TextInputRFQ
                 htmlFor="industry"
                 label="Industry"
                 type="text"
@@ -180,7 +180,7 @@ const PostRFQForm = ({ isDashboard, isLogin }) => {
                 icon={faCartShopping}
               />
 
-              <TextInput
+              <TextInputRFQ
                 htmlFor="password"
                 label="Create your password"
                 type="password"
@@ -190,7 +190,7 @@ const PostRFQForm = ({ isDashboard, isLogin }) => {
                 icon={faLock}
               />
 
-              <TextInput
+              <TextInputRFQ
                 htmlFor="confirm-password"
                 label="Confirm password"
                 type="confirm-password"
@@ -234,7 +234,7 @@ const PostRFQForm = ({ isDashboard, isLogin }) => {
             </div>
           )}
 
-          <TextInput
+          <TextInputRFQ
             htmlFor="moq"
             label="MOQ (Minimum Order Quantity)"
             type="number"
