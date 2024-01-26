@@ -4,17 +4,14 @@ import "./globals.css";
 const lato = Lato({
   weight: ["100", "300", "400", "700", "900"],
   subsets: ["latin"],
-  display: "swap",
   variable: "--font-lato",
 });
 const montserrat = Montserrat({
   subsets: ["latin"],
-  display: "swap",
   variable: "--font-montserrat",
 });
 const quicksand = Quicksand({
   subsets: ["latin"],
-  display: "swap",
   variable: "--font-quicksand",
 });
 
@@ -27,6 +24,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
+        suppressHydrationWarning={true}
         className={`${lato.variable} ${montserrat.variable} ${quicksand.variable}`}
       >
         {children}
