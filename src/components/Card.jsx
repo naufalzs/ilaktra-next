@@ -33,7 +33,8 @@ const Card = ({ item, isRFQ, isSeller, onClick }) => (
       "bg-white border-gray-100 border shadow flex space-x-6 w-[95%]",
       {
         "rounded px-4 md:px-6 py-4 w-full md:w-[95%]": isRFQ,
-        "rounded-3xl p-4 flex-col md:flex-row md:space-y-0 w-[95%]": !isRFQ,
+        "rounded-3xl p-4 flex-col md:flex-row space-y-6 md:space-y-0 w-[95%]":
+          !isRFQ,
       }
     )}
   >
@@ -41,8 +42,8 @@ const Card = ({ item, isRFQ, isSeller, onClick }) => (
       <div className="relative flex items-center">
         <div
           className={cx("relative", {
-            "w-[13.3rem] object-cover": !isSeller,
-            "w-full md:w-[15rem] ": isSeller,
+            "w-full md:w-[4.3rem] lg:w-[13.3rem] object-cover": !isSeller,
+            "w-full md:w-[4.3rem] lg:w-[15rem]": isSeller,
           })}
         >
           <Image
@@ -58,7 +59,11 @@ const Card = ({ item, isRFQ, isSeller, onClick }) => (
     )}
 
     <div className="flex flex-col">
-      <div className="flex md:flex-row flex-col space-x-3 ">
+      <div
+        className={cx("flex space-x-3", {
+          "flex-col md:flex-row": isSeller,
+        })}
+      >
         <p className="font-montserrat text-[#030303] text-xl leading-[26px]">
           {item.name}
         </p>
@@ -80,8 +85,12 @@ const Card = ({ item, isRFQ, isSeller, onClick }) => (
       )}
       <p
         className={cx(
-          "flex-1 w-full md:w-4/5 font-montserrat text-base text-black leading-[21px]",
-          { "py-4": isRFQ, "my-2": !isRFQ }
+          "flex-1 font-montserrat text-base text-black leading-[21px]",
+          {
+            "w-full md:w-4/5 py-4": isRFQ,
+            "w-full md:w-4/5 my-2": (isSeller && !isRFQ),
+            "w-4/5 my-2": (!isSeller && !isRFQ),
+          }
         )}
       >
         {item.description}

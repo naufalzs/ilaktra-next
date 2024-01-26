@@ -6,7 +6,7 @@ import { industryList } from "@/constants";
 const Industries = () => {
   return (
     <>
-      <div className="bg-[#182022] text-primary py-10 flex flex-col items-center">
+      <div className="bg-[#182022] text-primary py-10 flex flex-col items-center overflow-hidden">
         <H1 className="text-primary text-center">Our Major Industries</H1>
         <div className="grid md:grid-cols-5 grid-cols-2 md:gap-10 gap-6 text-black py-20">
           {industryList.map((item) => (

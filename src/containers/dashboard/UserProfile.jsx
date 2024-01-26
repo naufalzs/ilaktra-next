@@ -1,4 +1,5 @@
 import React from "react";
+import cx from "classnames";
 import {
   faBuilding,
   faFax,
@@ -15,7 +16,12 @@ const UserInfoCard = ({ title, info, isEmail, extra }) => (
       {" "}
       {title}
     </p>
-    <div className="flex flex-col h-full items-end justify-end pb-6 pr-2">
+    <div
+      className={cx("flex flex-col h-full items-end pb-6 pr-2", {
+        "justify-center": isEmail,
+        "justify-end": !isEmail
+      })}
+    >
       {isEmail ? (
         <p className="underline">{info}</p>
       ) : (
@@ -36,7 +42,11 @@ const UserProfile = ({ isBuyer }) => {
   return (
     <div className="md:w-2/3 md:px-10 px-5 my-10">
       <div className="flex md:flex-row flex-col mb-10 md:space-x-7 items-center md:space-y-0 space-y-3">
-        <UserInfoCard title="Membership Type" info="Free" extra={isBuyer ? "Upgrade" : ""} />
+        <UserInfoCard
+          title="Membership Type"
+          info="Free"
+          extra={isBuyer ? "Upgrade" : ""}
+        />
         <UserInfoCard title="Email" info="adasdads@asd.com" isEmail />
       </div>
 
