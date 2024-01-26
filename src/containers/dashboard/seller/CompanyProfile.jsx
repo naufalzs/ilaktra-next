@@ -34,13 +34,7 @@ const CompanyProfile = () => {
           <div className="col-span-2">
             <label
               htmlFor="message"
-              style={{
-                color: "#080a0b",
-                fontSize: "12px",
-                fontFamily: "Montserrat",
-                fontWeight: 500,
-                lineHeight: "16px",
-              }}
+              className="font-montserrat text-xs text-[#080a0b] font-medium leading-4"
             >
               Message
             </label>
