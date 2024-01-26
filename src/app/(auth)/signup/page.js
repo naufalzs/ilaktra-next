@@ -9,6 +9,7 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
 import Image from "next/image";
+import { Captcha, Checkbox } from "@/components";
 
 const TextInput = ({
   htmlFor,
@@ -166,44 +167,14 @@ export default function SignupPage() {
                   icon={faLock}
                 />
 
-                <div className="flex items-center justify-between w-5/6 mx-auto px-4 rounded-lg py-2 shadow">
-                  <div className="flex items-center">
-                    <input
-                      id="recaptcha"
-                      name="recaptcha"
-                      type="checkbox"
-                      required
-                      className="h-4 w-4 bg-primary focus:ring-green-500 border-gray-300 rounded"
-                    />
-                    <label
-                      htmlFor="recaptcha"
-                      className="ml-2 block text-sm text-gray-900"
-                    >
-                      I&#39;m not a robot
-                    </label>
-                  </div>
+                <Captcha />
 
-                  <img
-                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/RecaptchaLogo.svg/2048px-RecaptchaLogo.svg.png"
-                    alt=""
-                    className="w-16"
-                  />
-                </div>
-                <div className="flex">
-                  <input
-                    id="term"
-                    name="term"
-                    type="checkbox"
-                    required
-                    className="h-4 w-4 bg-primary focus:ring-green-500 border-gray-300 rounded"
-                  />
-                  <label
-                    htmlFor="recaptcha"
-                    className="ml-2 block text-sm text-gray-900"
-                  >
-                    I agree with the Terms and Privacy.
-                  </label>
-                </div>
+                <Checkbox
+                  htmlFor="term"
+                  label="I agree with the Terms and Privacy."
+                  name="term"
+                  id="term"
+                />
 
                 <div className="w-full mx-auto">
                   <Link
